@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de senhar</title>
+    <script src="gerador_de_senhas.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="conteudo">
+
+        <img src= gato_programador.gif alt="Gato programando" class="gif">
+
+        <h1>Gerador de senhas</h1>
+
+        <div class="input">
+            <label>Quantidade de caracteres:</label>
+            <input type="number" id="quantidade" max="50" min="8">
+        </div>
+
+        <label for="capital">Conter letras maiusculas?</label>
+        <input type="checkbox" id="capital" name="capital">
+
+        <label for="numbers">Conter números?</label>
+        <input type="checkbox" id="numbers" name="numbers">
+
+        <label for="especial">Conter caracteres especiais?</label>
+        <input type="checkbox" id="especial" name="especial">
+
+        <button id="gerar" onclick="aleatorizar()">Gerar senha</button>
+
+        <div class="senha" id="senha"></div>
+
+</body>
+
+</html>
