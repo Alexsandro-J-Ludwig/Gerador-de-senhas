@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="conteudo">
+    <main class="conteudo">
 
         <img src= gato_programador.gif alt="Gato programando" class="gif">
 
@@ -18,22 +18,24 @@
 
         <div class="input">
             <label>Quantidade de caracteres:</label>
-            <input type="number" id="quantidade" max="50" min="8">
+            <input type="range" id="quantidade" class="quantidade" max="50" min="8">
+            <span id="quantidadeValor">50</span>
         </div>
 
-        <label for="capital">Conter letras maiusculas?</label>
+        <label id="labelCapital" for="capital">Conter letras maiusculas?</label>
         <input type="checkbox" id="capital" name="capital">
 
-        <label for="numbers">Conter números?</label>
+        <label id="labelNumbers" for="numbers">Conter números?</label>
         <input type="checkbox" id="numbers" name="numbers">
 
-        <label for="especial">Conter caracteres especiais?</label>
+        <label id="labelEspecial" for="especial">Conter caracteres especiais?</label>
         <input type="checkbox" id="especial" name="especial">
 
-        <button id="gerar" onclick="aleatorizar()">Gerar senha</button>
+        <button id="gerar">Gerar senha</button>
 
         <div class="senha" id="senha"></div>
 
+    </main>
 </body>
 
 </html>

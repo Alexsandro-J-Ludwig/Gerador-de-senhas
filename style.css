@@ -1,6 +1,7 @@
 body {
     display: flex;
-    background-color: grey;
+    background: #e6e6e6;
+    background: linear-gradient(180deg, rgba(230, 230, 230, 1) 0%, rgba(177, 201, 187, 1) 50%, rgba(220, 232, 186, 1) 100%);
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -8,15 +9,13 @@ body {
 }
 
 .conteudo {
-    background-color: #c5c5c5;
+    background-color: #c5c5c57c;
     height: 380px;
-    width: 400px;
+    width: 450px;
     border-radius: 4%;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
-
-
 
 .conteudo h1 {
     color: #000000;
@@ -25,8 +24,6 @@ body {
 }
 
 .input {
-    font-size: 24px;
-    font-weight: bolder;
     display: flex;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -34,41 +31,57 @@ body {
 }
 
 #quantidade{
-    border-radius: 7px;
     height: 20px;
-    width: 40px;
-    opacity: 80%;
-    font-style: normal;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    width: 80px;
 }
 
-input[type=checkbox]{
-    margin-right: 10px;
-}
-
-input[type=checkbox], label {
-    display: block;
-    text-align: left;
+#quantidadeValor {
+    position: relative;
+    background-color: #fff;
+    width: 22px;
+    height: 21px;
+    border-radius: 5px;
+    display: flex;
+    font-weight: bolder;
+    size: 25px;
+    left: 10px;
     font-size: 20px;
+}
+
+input[type=checkbox] {
+    
     block-size: 20px;
+    
+}
+
+#labelCapital, #labelNumbers, #labelEspecial {
+    display: block;
+    text-align: center;
+    font-size: 20px;
     font-weight: bold;
 }
 
 #gerar {
+    display: flex;
+    position: relative;
     font-size: 15px;
     font-weight: bold;
     border-radius: 20px;
     margin-top: 20px;
-    justify-content: center;
+    left: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
+
+#gerar:hover {
+    background-color: #626570;
+    cursor: pointer;
+}
+
 
 #senha {
     margin-top: 20px;
     background-color: #fff;
-    width: 380px;
+    width: 430px;
     height: 50px;
     border-radius: 20px;
     display: flex;
@@ -78,6 +91,11 @@ input[type=checkbox], label {
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+#senha::content {
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .gif {

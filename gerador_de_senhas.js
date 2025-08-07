@@ -1,11 +1,25 @@
-const alphaCaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const alpha = 'abcdefghijklmnopqrstuvwxyz';
-const numbers = '1234567890';
-const caracteres = '!@#$%&*()_+{}[]~^:;>.<,¨|\?/';
+addEventListener('DOMContentLoaded', function() {
+    const quantidade = document.getElementById('quantidade')
+    const quantidadeValor = document.getElementById('quantidadeValor')
 
-let senha = ''
+    quantidadeValor.textContent = quantidade.value;
 
-function aleatorizar() {
+    quantidade.addEventListener('input', function() {
+        quantidadeValor.textContent = quantidade.value;
+    });
+
+    const gerar = document.getElementById('gerar');
+    gerar.addEventListener('click', () => {
+        aleatorizar(quantidade.value);
+    });
+})
+
+function aleatorizar(quantidade) {
+    let senha = '';
+    const alphaCaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const alpha = 'abcdefghijklmnopqrstuvwxyz';
+    const numbers = '1234567890';
+    const caracteres = '!@#$%&*()_+{}[]~^:;>.<,¨|?/';
 
     if (senha != ''){
         limparCampos()
@@ -14,7 +28,6 @@ function aleatorizar() {
     const capital = document.getElementById('capital').checked;
     const nuns = document.getElementById('numbers').checked;
     const especial = document.getElementById('especial').checked;
-    const quantidade = document.getElementById('quantidade').value;
 
     let caracteresDisponiveis = alpha;
 
