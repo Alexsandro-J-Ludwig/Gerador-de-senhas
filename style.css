@@ -5,14 +5,14 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    height: 100vh;
+    height: 130vh;
 }
 
 .conteudo {
     background-color: #c5c5c57c;
-    height: 380px;
+    height: 500px;
     width: 450px;
-    border-radius: 4%;
+    border-radius: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
@@ -28,39 +28,96 @@ body {
     margin-bottom: 10px;
     margin-top: 10px;
     justify-content: center;
+    margin-bottom: 10%;
+    font-weight: bolder;
 }
 
 #quantidade{
     height: 20px;
-    width: 80px;
+    width: 150px;
+    position: absolute;
+    top: 240px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 16%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: #000000;
+    background: linear-gradient(87deg, rgb(124, 124, 124) 0%, rgba(250, 250, 250, 1) 100%);
+    border-radius: 20px;
+    height: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    outline-color: #000000;
+    outline-width: 20px;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+    background-color: #000000;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
 }
 
 #quantidadeValor {
-    position: relative;
+    position: absolute;
     background-color: #fff;
-    width: 22px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
     border-radius: 5px;
     display: flex;
     font-weight: bolder;
-    size: 25px;
-    left: 10px;
-    font-size: 20px;
+    font-size: 17px;
+    top: 240px;
+    left: 330px;
 }
 
 input[type=checkbox] {
-    
-    block-size: 20px;
-    
+    appearance: none;
+    background-color: #fff;
+    width: 18px;
+    height: 18px;
+    border-radius: 30%;
+}
+
+input[type=checkbox]:hover {
+    background-color: #acacac;
+    cursor: pointer;   
+}
+
+input[type=checkbox]:checked {
+    background-color: #ccffdb;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #b1b1b1;
+}
+
+input[type=checkbox]:checked:hover {
+    background-color: #a0fdbc;
+    cursor: pointer;
 }
 
 #labelCapital, #labelNumbers, #labelEspecial {
-    display: block;
+    margin: 5px;
     text-align: center;
     font-size: 20px;
     font-weight: bold;
 }
-
 #gerar {
     display: flex;
     position: relative;
@@ -68,41 +125,59 @@ input[type=checkbox] {
     font-weight: bold;
     border-radius: 20px;
     margin-top: 20px;
-    left: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    left: 36%;
+    border: none;
+    width: 30%;
+    height: 4%;
+    justify-content: center;
+    animation: gerarClarear 1s ease-in-out;
 }
 
 #gerar:hover {
     background-color: #626570;
     cursor: pointer;
+    animation: escurecer 1s ease-in-out;
 }
 
+@keyframes escurecer {
+    0% {
+        background-color: #ffffff;
+    }
+    100% {
+        background-color: #626570;
+    }
+}
+
+@keyframes gerarClarear{
+    0% {
+        background-color: #626570;
+    }
+    100% {
+        background-color: #ffffff;
+    }
+}
 
 #senha {
     margin-top: 20px;
     background-color: #fff;
     width: 430px;
-    height: 50px;
+    height: 115px;
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
 }
 
-#senha::content {
-    font-size: 25px;
-    font-weight: bold;
-}
+.textoSenha {
 
-.gif {
-    width: 130px;
-    position: absolute;
-    top: 620px;
-    left: 510px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-    
+    font-weight: bolder;
+    font-size: 14px;
+    margin: 10px;
 }
