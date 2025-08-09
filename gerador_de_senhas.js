@@ -1,6 +1,6 @@
     addEventListener('DOMContentLoaded', function() {
-        const quantidade = document.getElementById('quantidade')
-        const quantidadeValor = document.getElementById('quantidadeValor')
+        const quantidade = document.getElementById('quantidade');
+        const quantidadeValor = document.getElementById('quantidadeValor');
 
         quantidadeValor.textContent = quantidade.value;
 
@@ -24,8 +24,8 @@
         const caracteres = '!@#$%&*()_+{}[]~^:;>.<,¨|?/';
 
         if (senha != ''){
-            limparCampos()
-        }
+            limparCampos();
+        };
 
         const capital = document.getElementById('capital').checked;
         const nuns = document.getElementById('numbers').checked;
@@ -35,38 +35,30 @@
 
         if (capital) {
             caracteresDisponiveis += alphaCaps;
-        }
+        };
         if (nuns) {
             caracteresDisponiveis += numbers;
-        }
+        };
         if (especial) {
             caracteresDisponiveis += caracteres;
-        }
-
-        if (quantidade < 8){
-            senha = 'Senha abaixo do número mínimo exigido';
+        };
+  
             return document.getElementById('senha').textContent = senha;
-        }
 
         for (let i = 1; i <= quantidade && i < 50; i++){
             const randonIndex = Math.floor(Math.random() * caracteresDisponiveis.length);
             senha += caracteresDisponiveis[randonIndex];
-        }
+        };
 
         senhaArr.unshift(senha);
 
         if(senhaArr.length > 3) {
             senhaArr.splice(3);
-        }
+        };
 
         console.log(senhaArr);
 
         document.getElementById('senha').innerHTML = senhaArr.map(s => `<ol class="textoSenha">${s}</ol>`).join('');
         
         
-    }
-
-    function limparCampos(){
-        document.getElementById('senha').textContent = ''
-        senha = ''
-    }
+    };
